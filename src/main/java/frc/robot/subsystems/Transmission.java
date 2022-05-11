@@ -12,7 +12,7 @@ import frc.robot.Constants;
  */
 
 public class Transmission extends SubsystemBase {
-  private Solenoid m_shiftPiston;
+  // private Solenoid m_shiftPiston;
   private Solenoid m_shiftPistonHigh;
   private Solenoid m_shiftPistonLow;
   private GearState m_gearState;
@@ -63,15 +63,15 @@ public class Transmission extends SubsystemBase {
   }
 
   private void setTrue() {
-    m_shiftPiston.set(true);
-    // m_shiftPistonHigh.set(true);
-    // m_shiftPistonLow.set(false);
+    // m_shiftPiston.set(true);
+    m_shiftPistonHigh.set(true);
+    m_shiftPistonLow.set(false);
   }
 
   private void setFalse() {
-    m_shiftPiston.set(false);
-    // m_shiftPistonHigh.set(false);
-    // m_shiftPistonLow.set(true);
+    // m_shiftPiston.set(false);
+    m_shiftPistonHigh.set(false);
+    m_shiftPistonLow.set(true);
   }
 
   @Override
