@@ -40,7 +40,7 @@ import frc.robot.Constants;
 // Imports for Simulation
 import com.ctre.phoenix.motorcontrol.TalonFXSimCollection;
 import com.ctre.phoenix.sensors.BasePigeonSimCollection;
-// import com.ctre.phoenix.sensors.WPI_Pigeon2;
+import com.ctre.phoenix.sensors.WPI_Pigeon2;
 import com.ctre.phoenix.sensors.WPI_PigeonIMU;
 
 import edu.wpi.first.wpilibj.simulation.DifferentialDrivetrainSim;
@@ -53,7 +53,7 @@ import edu.wpi.first.math.system.plant.LinearSystemId;
    * DrivetrainSubsystem handles all subsystem level logic for the drivetrain.
    * Possibly also Ramsete idfk I haven't finished this class yet.
    */
-// import frc.robot.subsystems.Pigeon;
+import frc.robot.subsystems.Pigeon;
 
 public class Drivetrain extends SubsystemBase {
 
