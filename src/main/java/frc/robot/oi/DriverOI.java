@@ -30,8 +30,8 @@ public class DriverOI {
         m_toggleIntakeMotor = new JoystickButton(m_controller, XboxController.Button.kA.value);
         m_toggleFeederMotor = new JoystickButton(m_controller, XboxController.Button.kB.value);
         //m_reverseFeederButton = new JoystickButton(m_controller, XboxController.Button.kX.value);
-        // m_shiftLow = new JoystickButton(m_controller, XboxController.Button.kX.value);
-        // m_shiftHigh = new JoystickButton(m_controller, XboxController.Button.kY.value);
+        m_shiftLow = new JoystickButton(m_controller, XboxController.Button.kX.value);
+        m_shiftHigh = new JoystickButton(m_controller, XboxController.Button.kY.value);
         m_shiftButton = new Button(() -> m_controller.getLeftStickButtonPressed());
 
         m_moveToShootingDistance = new JoystickButton(m_controller, XboxController.Button.kX.value);
@@ -105,14 +105,14 @@ public class DriverOI {
 
     // ---------------- Drivetrain ----------------------------
 
-    // public Button getShiftLowButton() {
-    //     return m_shiftLow;
-    // }
+    public Button getShiftLowButton() {
+       return m_shiftLow;
+    }
 
 
-    // public Button getShiftHighButton() {
-    //     return m_shiftHigh;
-    // }
+    public Button getShiftHighButton() {
+        return m_shiftHigh;
+    }
 
     public Button getShiftButton(){
         return m_shiftButton;

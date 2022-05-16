@@ -13,8 +13,11 @@ import frc.robot.Constants;
 
 public class Transmission extends SubsystemBase {
   // private Solenoid m_shiftPiston;
-  private Solenoid m_shiftPistonHigh;
-  private Solenoid m_shiftPistonLow;
+  private Solenoid m_shiftPistonHigh1;
+  private Solenoid m_shiftPistonHigh2;
+  private Solenoid m_shiftPistonLow1;
+  private Solenoid m_shiftPistonLow2;
+  
   private GearState m_gearState;
 
   public enum GearState {
@@ -24,8 +27,11 @@ public class Transmission extends SubsystemBase {
   public Transmission() {
 
     // m_shiftPiston = new Solenoid(PneumaticsModuleType.CTREPCM, Constants.PneumaticIDs.kDrivetrainShiftSolenoid);
-    m_shiftPistonHigh = new Solenoid(PneumaticsModuleType.REVPH, Constants.PneumaticIDs.kDrivetrainShiftSolenoidHigh);
-    m_shiftPistonLow = new Solenoid(PneumaticsModuleType.REVPH, Constants.PneumaticIDs.kDrivetrainShiftSolenoidLow);
+    m_shiftPistonHigh1 = new Solenoid(PneumaticsModuleType.REVPH, Constants.PneumaticIDs.kDrivetrainShiftSolenoidHigh);
+    m_shiftPistonHigh2 = new Solenoid(PneumaticsModuleType.REVPH, Constants.PneumaticIDs.kRampSolenoidClosed);
+    m_shiftPistonLow1 = new Solenoid(PneumaticsModuleType.REVPH, Constants.PneumaticIDs.kDrivetrainShiftSolenoidLow);
+    m_shiftPistonLow2 = new Solenoid(PneumaticsModuleType.REVPH, Constants.PneumaticIDs.kRampSolenoidOpen);
+
 
     m_gearState = GearState.LOW;
 
@@ -64,14 +70,18 @@ public class Transmission extends SubsystemBase {
 
   private void setTrue() {
     // m_shiftPiston.set(true);
-    m_shiftPistonHigh.set(true);
-    m_shiftPistonLow.set(false);
+    m_shiftPistonHigh1.set(true);
+    m_shiftPistonHigh2.set(true);
+    m_shiftPistonLow1.set(false);
+    m_shiftPistonLow2.set(false);
   }
 
   private void setFalse() {
     // m_shiftPiston.set(false);
-    m_shiftPistonHigh.set(false);
-    m_shiftPistonLow.set(true);
+    m_shiftPistonHigh1.set(false);
+    m_shiftPistonHigh2.set(false);
+    m_shiftPistonLow1.set(true);
+    m_shiftPistonLow2.set(true);
   }
 
   @Override

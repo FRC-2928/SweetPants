@@ -60,8 +60,8 @@ public final class Constants {
 
         public static final int kDrivetrainShiftSolenoidLow = 0;
         public static final int kDrivetrainShiftSolenoidHigh = 1;
-        // public static final int kRampSolenoidOpen = 2;
-        // public static final int kRampSolenoidClosed = 3;
+        public static final int kRampSolenoidOpen = 2;
+        public static final int kRampSolenoidClosed = 3;
        
     }
 
